@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dirchamsyah</title>
     <link rel="stylesheet" href="dist/output.css">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        } else {
+        document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 <body>
     <!-- Header Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="bg-transparent   absolute top-0 left-0 w-full flex items-center z-10">
         <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
-                    <a href="#home" class="font-bold text-2xl text-slate-700 block py-6">drchm<span class=" mx-1  text-primary font-serif mt-3 mb-2 animate-text bg-gradient-to-r from-teal-500 via-cyan-500 to-purple-800 bg-clip-text text-transparent ">;</span> </a>
+                    <a href="#home" class="font-bold text-2xl text-slate-700 block py-6 dark:text-slate-200">drchm<span class=" mx-1  text-primary font-serif mt-3 mb-2 animate-text bg-gradient-to-r from-teal-500 via-pink-400 to-purple-800 bg-clip-text text-transparent ">;</span> </a>
                 </div>
+               
                 <div class="flex items-center px-4">
                     <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
                         <span class="hamburger-line transition duration-300 ease-in-out origin-top-left "></span>
@@ -24,22 +32,35 @@
                         <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                     </button>
 
-                    <nav id="nav-menu" class="lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[200px] w-full right-4 top-full">
+                    <nav id="nav-menu" class="lg:block lg:static lg:bg-transparent  lg:max-w-full lg:shadow-none lg:rounded-none hidden absolute py-5  dark:bg-dark  bg-white dark:shadow-slate-500 shadow-lg rounded-lg max-w-[200px] w-full right-4 top-full">
                         <ul class="block lg:flex">
-                            <li class="group lg:hidden" >
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Home</a>
+                                <li class="group lg:hidden" >
+                                <a href="#home" class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-primary ">Home</a>
                             </li>
                             <li class="group">
-                                <a href="#aboutme" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">About Me</a>
+                                <a href="#aboutme" class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-primary ">About Me</a>
                             </li>
                             <li class="group">
-                                <a href="#porto" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Portofolio</a>
+                                <a href="#porto" class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-primary ">Portofolio</a>
                             </li>
                             <li class="group">
-                                <a href="#skill" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Skill</a>
+                                <a href="#skill" class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-primary ">Skill</a>
                             </li>
                             <li class="group">
-                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary ">Contact</a>
+                                <a href="#contact" class="text-base text-dark dark:text-white py-2 mx-8 flex group-hover:text-primary ">Contact</a>
+                            </li>
+                            
+                            <li class="flex items-center">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle"/>
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -53,13 +74,13 @@
 
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark" >
         <div class="container">
             <div class="flex flex-wrap ">
                 <div class="w-full self-center px-4 lg:w-1/2 z-10 ">
-                    <h1 class=" text-base font-semibold  text-primary md:text-xl ">Hi Everyone! I'm<span class=" block font-bold text-3xl mt-3 mb-2 lg:text-7xl text-dark animate-text bg-gradient-to-r from-teal-500 via-cyan-500 to-purple-800 bg-clip-text text-transparent py-1">Dirchamsyah</span></h1>
-                    <h2 class="font-medium text-secondary text-lg lg:text-2xl mb-5">Always a <span class="text-dark">Student</span></h2>
-                    <p class="font-normal text-secondary text-base mb-6 lg:text-lg">I am a computer science student who is passionate about learning programming. With a strong determination, I dive into the world of coding and software development.</p>
+                    <h1 class=" text-base font-semibold  text-primary md:text-xl ">Hi Everyone! I'm<span class=" block font-bold text-3xl mt-3 mb-2 lg:text-7xl text-dark animate-text bg-gradient-to-r from-sky-600 via-cyan-600 to-purple-500 dark:from-cyan-500 dark:via-lime-300 dark:to-pink-500 bg-clip-text text-transparent py-1">Dirchamsyah</span></h1>
+                    <h2 class="font-medium text-secondary text-lg lg:text-2xl mb-5 dark:text-slate-300">Always a <span class="text-dark dark:text-white font-semibold">Student</span></h2>
+                    <p class="font-normal text-secondary text-base mb-6 lg:text-lg dark:text-slate-300">I am a computer science student who is passionate about learning programming. With a strong determination, I dive into the world of coding and software development.</p>
 
                     <a href="#contact" class="text-base font-semibold py-3 px-8  text-white bg-primary rounded-full mb-10 hover:shadow-lg hover:opacity-75 trasition duration-300 ease-in-out ">Contact Me</a>
                 </div>
@@ -79,17 +100,17 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="aboutme" class="pt-36 pb-32">
+    <section id="aboutme" class="pt-36 pb-32 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-8 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3 lg:mb-8 lg:text-2xl">About Me</h4>
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl">Keep Learning</h3>
-                    <p class="text-base font-medium text-secondary max-w-2xl md:max-w-full lg:pr-10 lg:text-xl">As a computer science student at Dian Nuswantoro University in Semarang, I am dedicated to honing my skills, expanding my knowledge, and becoming a well-rounded professional ready to make a difference in the tech industry.</p>
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl dark:text-white">Keep Learning</h3>
+                    <p class="text-base font-medium text-secondary max-w-2xl md:max-w-full lg:pr-10 lg:text-xl dark:text-slate-300">As a computer science student at Dian Nuswantoro University in Semarang, I am dedicated to honing my skills, expanding my knowledge, and becoming a well-rounded professional ready to make a difference in the tech industry.</p>
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-16">Let's Code !</h3>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-xl max-w-2xl md:max-w-full lg:pr-10">As a student pursuing a degree in computer science, I am constantly engaged in expanding my knowledge of fundamental programming concepts such as algorithms, data structures, and logical reasoning. I embrace challenges and enjoy unraveling complex problems by applying my programming skills.</p>
+                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-16 dark:text-white">Let's Code !</h3>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-xl max-w-2xl md:max-w-full lg:pr-10 dark:text-slate-300">As a student pursuing a degree in computer science, I am constantly engaged in expanding my knowledge of fundamental programming concepts such as algorithms, data structures, and logical reasoning. I embrace challenges and enjoy unraveling complex problems by applying my programming skills.</p>
                     
                 </div>
             </div>
@@ -99,23 +120,32 @@
     <!-- About Section End -->
 
     <!-- Portofolio Section Start -->
-    <section id="porto" class="pt-36 pb-16 bg-slate-100">
+    <section id="porto" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-10">
                     <h4 class="font-semibold text-primary mb-2 uppercase">Portofolio</h4>
-                    <h2 class="font-bold text-dark text-3xl sm:text-4xl lg:text-5xl mb-4">Latest Project</h2>
-                    <p class="font-medium md:text-lg text-base text-secondary ">This is some of my project portfolio.</p>
+                    <h2 class="font-bold text-dark text-3xl sm:text-4xl lg:text-5xl mb-4 dark:text-white">Latest Project</h2>
+                    <p class="font-medium md:text-lg text-base text-secondary dark:text-slate-300 ">This is some of my project portfolio.</p>
                 </div>
             </div>
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/img/db.png" alt="" width="w-full">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3 dark:text-white">Database Pendataan Siswa</h3>
+                        <p class="font-medium text-base text-secondary dark:text-slate-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
+                    </div>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/matrix.png" alt="" width="w-full">
                     </div>
                     <div>
-                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Matrix Calculator</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3 dark:text-white">Matrix Calculator</h3>
+                        <p class="font-medium text-base text-secondary dark:text-slate-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
                     </div>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
@@ -123,17 +153,8 @@
                         <img src="dist/img/db.png" alt="" width="w-full">
                     </div>
                     <div>
-                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Database Pendataan Siswa</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
-                    </div>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/db.png" alt="" width="w-full">
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3">Database Pendataan Siswa</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
+                        <h3 class="font-semibold text-dark text-xl mt-5 mb-3 dark:text-white">Database Pendataan Siswa</h3>
+                        <p class="font-medium text-base text-secondary dark:text-slate-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id a aspernatur dignissimos quis debitis sed itaque doloremque accusantium deleniti ab.</p>
                     </div>
                 </div>
                 
@@ -143,37 +164,37 @@
     <!-- Portofolio Section End -->
     
     <!-- Skill Section Start -->
-    <section id="skill" class="pt-36 pb-32 bg-slate-700"> 
+    <section id="skill" class="pt-36 pb-32 bg-slate-700 dark:bg-slate-700"> 
         <div class="container">
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-primary mb-2 uppercase">Skill</h4>
-                    <h2 class="font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4">Within My Ability </h2>
-                    <p class="font-medium md:text-lg text-base text-secondary ">I possess a diverse set of programming skills that enable me to tackle various development.</p>
+                    <h2 class="font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-4 dark:text-white">Within My Ability </h2>
+                    <p class="font-medium md:text-lg text-base text-secondary dark:text-slate-300 ">I possess a diverse set of programming skills that enable me to tackle various development.</p>
                 </div>
             </div>
             <div class="w-full px-4">
                 <div class="flex flex-wrap items-center justify-center">
                     <span class="max-w-[75px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <img src="dist/img/skill-icons/icons8-html.svg" alt="" class="my-1">
-                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary ">HTML</div>
+                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary dark:text-slate-200 ">HTML</div>
                     </span>
                     <span class="max-w-[75px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <img src="dist/img/skill-icons/icons8-css.svg" alt="" class="my-1">
-                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary ">CSS</div>
+                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary dark:text-slate-200">CSS</div>
                     </span>
                     <span class="max-w-[75px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <img src="dist/img/skill-icons/icons8-tailwind-css.svg" alt="" class="my-1">
-                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary ">TailwindCSS</div>
+                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary dark:text-slate-200">TailwindCSS</div>
                     </span>
                     <span class="max-w-[75px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <img src="dist/img/skill-icons/icons8-c.svg" 
                         alt="" class="my-1">
-                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary ">C++</div>
+                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary dark:text-slate-200">C++</div>
                     </span>
                     <span class="max-w-[75px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <img src="dist/img/skill-icons/icons8-mysql.svg" alt="" class="my-1">
-                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary ">MySQL</div>
+                        <div class="opacity-0 hover:opacity-100 duration-300 absolute inset-0 z-10 flex justify-center items-end text-sm text-secondary dark:text-slate-200">MySQL</div>
                     </span>
                 </div>
             </div>
@@ -182,13 +203,13 @@
     <!-- Skill Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32 bg-slate-100"> 
+    <section id="contact" class="pt-36 pb-32 bg-slate-100 dark:bg-dark"> 
         <div class="container">
             <div class="w-full px-4 flex flex-wrap">
                 <div class="mx-auto text-center mb-10">
                     <h4 class="font-semibold text-primary mb-2 uppercase">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl sm:text-4xl lg:text-5xl mb-4">Let's Connect </h2>
-                    <p class="font-medium md:text-lg text-base text-secondary max-w-3xl">Whether you have questions, collaboration opportunities, or simply want to connect and discuss shared interests, I encourage you to reach out using any of the provided channels.</p>
+                    <h2 class="font-bold text-dark text-3xl sm:text-4xl lg:text-5xl mb-4 dark:text-white">Let's Connect </h2>
+                    <p class="font-medium md:text-lg text-base text-secondary max-w-3xl dark:text-slate-300">Whether you have questions, collaboration opportunities, or simply want to connect and discuss shared interests, I encourage you to reach out using any of the provided channels.</p>
                 </div>
             </div>
             <div class="w-full px-2">
@@ -196,14 +217,14 @@
                     <a href="mailto:dirchamsyah@email.com"  class="max-w-[100px] lg:max-w-[150px] mx-4 lg:mx-6 xl:mx-8 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500 cursor-pointer">
                         <span>
                             <img src="dist/img/skill-icons/icons8-gmail.svg" alt="" class="my-1" target="_blank">
-                            <div class="flex items-end text-sm lg:text-2xl justify-center text-secondary ">Contact <span class="ml-1">Me!</span></div>
+                            <div class="flex items-end text-sm lg:text-2xl justify-center text-secondary dark:text-white ">Contact <span class="ml-1">Me!</span></div>
                         </span>
                     </a>
                 </div>
                 <hr class="my-10">
                 <div class="mx-auto text-center mb-16">
-                    <h2 class="font-bold text-dark text-xl sm:text-2xl lg:text-3xl mb-4">The media platforms I utilized</h2>
-                    <p class="font-medium md:text-lg text-base text-secondary ">These are some of the channels to reach me.</p>
+                    <h2 class="font-bold text-dark text-xl sm:text-2xl lg:text-3xl mb-4 dark:text-white">The media platforms I utilized</h2>
+                    <p class="font-medium md:text-lg text-base text-secondary dark:text-slate-300 ">These are some of the channels to reach me.</p>
                 </div>
             </div>
             <div class="w-full px-4 ">
@@ -247,18 +268,18 @@
     <!-- Contact Section End -->
 
     <!-- Footer Section Start -->
-    <footer class="bg-dark pt-6 pb-4 lg:pt-3 lg:pb-2">
+    <footer class="bg-dark pt-6 pb-4 lg:pt-3 lg:pb-2 dark:bg-slate-100">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="lg:hidden w-full px-4 mb-6 text-slate-300 font-medium md:w-1/3">
-                    <h3 class="font-bold text-2xl text-white mb-2 ">Hubungi Saya</h3>
-                    <p class="">dirchamsyah@gmail.com</p>
-                    <p>Desa Jagung, Kesesi,</p>
-                    <p>Pekalongan, Jawa Tengah</p>
+                    <h3 class="font-bold text-2xl text-white mb-2 dark:text-dark ">Hubungi Saya</h3>
+                    <p class="dark:text-slate-700">dirchamsyah@gmail.com</p>
+                    <p class="dark:text-slate-700">Desa Jagung, Kesesi,</p>
+                    <p class="dark:text-slate-700">Pekalongan, Jawa Tengah</p>
                 </div>
                 <div class="flex items-center w-full pt-3 border-t text-slate-400 border-slate-600 justify-center lg:hidden"></div>
                 <div class="flex items-center w-full pt-3 justify-center text-slate-400 mb-3 ">
-                <span class="m-2 font-thin ">© 2023 </span>|<a href="#" class="m-2 font-semibold text-white">Dirchamsyah</a>
+                <span class="m-2 font-thin dark:text-slate-700">© 2023 </span>|<a href="#" class="m-2 font-semibold text-white dark:text-dark">Dirchamsyah</a>
                 </div>
             </div>
         </div>
