@@ -691,8 +691,19 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.mb-1 {
-  margin-bottom: 0.25rem;
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-10 {
@@ -759,6 +770,14 @@ video {
   margin-top: 1.25rem;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -797,6 +816,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-14 {
@@ -1314,6 +1341,43 @@ body {
 .hamburger-active > span:nth-child(3) {
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounce 1s infinite;
 }
 
 .hover\:opacity-100:hover {
