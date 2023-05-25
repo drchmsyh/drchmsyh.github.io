@@ -21,7 +21,7 @@ body {
   }
 
   .sosmed-icons {
-    @apply mx-5 max-w-[50px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 lg:max-w-[50px] xl:mx-8;
+    @apply mx-2 max-w-[50px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 lg:max-w-[50px] xl:mx-8;
   }
 }
 
