@@ -700,20 +700,18 @@
       class="flex h-[100vh] items-center justify-center bg-slate-100 pb-32 pt-36 dark:bg-dark">
       <article class="mb-16 w-[360px] max-w-full">
         <div class="relative block w-[360px] max-w-full">
-          <div class="cursor-pointer">
-            <div
-              class="group absolute flex h-full w-full flex-wrap justify-center">
-              <div
-                class="absolute left-0 top-0 block h-full w-full bg-transparent hover:scale-110 hover:bg-purple-300 hover:bg-opacity-25"></div>
+          <div class="group cursor-pointer">
+            <div class="absolute flex h-full w-full flex-wrap justify-center">
               <span
-                class="text-3xl text-primary opacity-0 group-hover:opacity-100"
+                class="absolute bg-lime-300 text-3xl text-primary opacity-0 group-hover:opacity-100"
                 >Title</span
               >
-              <a
-                href="#"
-                class="text-3xl text-primary opacity-0 group-hover:opacity-100"
-                >Link</a
-              >
+              <span
+                class="absolute w-auto justify-end bg-slate-500 opacity-0 group-hover:z-[2] group-hover:opacity-100">
+                <a href="#" class="text-md text-primary">Link</a>
+              </span>
+              <div
+                class="absolute left-0 top-0 block h-full w-full bg-transparent hover:scale-110 hover:bg-purple-300 hover:bg-opacity-25"></div>
             </div>
             <img src="dist/img/porto_drchm.png" alt="" />
           </div>
