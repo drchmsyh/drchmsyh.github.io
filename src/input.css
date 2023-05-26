@@ -38,11 +38,8 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply scale-0;
 }
-.input:autofill {
-  @apply bg-transparent;
-}
 .inputBox > input:valid ~ label {
-  @apply -translate-y-6 text-primary;
+  @apply -translate-y-6 text-[10px] text-primary;
 }
 .inputBox > input:invalid {
   @apply text-transparent;
@@ -51,7 +48,7 @@ body {
   @apply text-slate-800 dark:text-slate-100;
 }
 .inputBox > input:focus ~ label {
-  @apply -translate-y-6  text-primary;
+  @apply -translate-y-6 text-[10px]  text-primary;
 }
 
 .inputBox > input:focus ~ i {
@@ -59,10 +56,4 @@ body {
 }
 .inputBox > input:valid ~ i {
   @apply bg-primary;
-}
-.inputBox > input:focus ~ .btn-kirim > button {
-  @apply animate-border bg-gradient-to-l from-red-500 via-lime-500 to-sky-500 content-none;
-}
-.inputBox > input:nth-child(1):valid ~ .btn-kirim {
-  @apply text-lime-700;
 }
