@@ -18,6 +18,7 @@ module.exports = {
       },
       animation: {
         text: "text 5s ease infinite",
+        border: "animate 2s linear both infinite",
       },
       keyframes: {
         text: {
@@ -28,6 +29,14 @@ module.exports = {
           "50%": {
             "background-size": "200% 200%",
             "background-position": "right center",
+          },
+        },
+        animate: {
+          "0%": {
+            "background-position-x": "0px",
+          },
+          "100%": {
+            "background-position-x": "400px",
           },
         },
       },
