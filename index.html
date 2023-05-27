@@ -7,6 +7,7 @@
     <title>Dirchamsyah</title>
     <link rel="shortcut icon" href="dist/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <script>
       if (
         localStorage.theme === "dark" ||
@@ -25,7 +26,7 @@
       class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent">
       <div class="container">
         <div class="relative flex items-center justify-between">
-          <div class="px-4">
+          <div class="px-4" data-aos="zoom-out" data-aos-duration="2000">
             <a
               href="#home"
               class="block py-6 text-2xl font-bold text-slate-700 dark:text-slate-200"
@@ -54,8 +55,13 @@
 
             <nav
               id="nav-menu"
+              data-aos="fade-down"
+              data-aos-duration="1000"
               class="absolute right-4 top-full hidden w-full bg-white py-5 dark:bg-dark lg:static lg:block lg:max-w-full lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
-              <ul class="block lg:flex">
+              <ul
+                class="block lg:flex"
+                data-aos="fade-down"
+                data-aos-duration="2000">
                 <li class="group lg:hidden">
                   <a
                     href="#home"
@@ -81,7 +87,7 @@
                   <a
                     href="#skill"
                     class="mx-8 flex py-3 text-2xl text-dark group-hover:text-primary dark:text-white lg:py-2 lg:text-base"
-                    >Skill</a
+                    >Skills</a
                   >
                 </li>
                 <li class="group mb-1">
@@ -118,7 +124,10 @@
     <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="z-10 w-full self-center px-4 lg:w-1/2">
+          <div
+            class="z-10 w-full self-center px-4 lg:w-1/2"
+            data-aos="fade"
+            data-aos-duration="3000">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hi Everyone! I'm<span
                 class="mb-2 mt-3 block animate-text bg-gradient-to-r from-sky-600 via-cyan-600 to-purple-500 bg-clip-text py-1 text-3xl font-bold text-dark text-transparent dark:from-cyan-500 dark:via-lime-300 dark:to-pink-500 lg:text-7xl"
@@ -146,7 +155,11 @@
             >
           </div>
 
-          <div class="group w-full self-end px-4 lg:w-1/2">
+          <div
+            class="group w-full self-end px-4 lg:w-1/2"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-anchor-placement="center center">
             <div class="relative z-10 mt-10 cursor-pointer lg:right-0 lg:mt-0">
               <div class="mb-2"></div>
               <img
@@ -175,7 +188,7 @@
 
     <!-- About Section Start -->
     <section id="aboutme" class="pb-32 pt-36 dark:bg-dark">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
         <div class="flex flex-wrap">
           <div class="mb-8 w-full px-4 lg:w-1/2">
             <h4
@@ -194,7 +207,10 @@
               a difference in the tech industry.
             </p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
+          <div
+            class="w-full px-4 lg:w-1/2"
+            data-aos="fade-up"
+            data-aos-duration="2000">
             <h3
               class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-16 lg:text-3xl">
               Let's Code !
@@ -215,9 +231,12 @@
 
     <!-- Portofolio Section Start -->
     <section id="porto" class="bg-slate-100 pb-16 pt-36 dark:bg-slate-800">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
         <div class="w-full px-4">
-          <div class="mx-auto mb-10 max-w-xl text-center">
+          <div
+            class="mx-auto mb-10 max-w-xl text-center"
+            data-aos="fade-up"
+            data-aos-duration="500">
             <h4 class="mb-2 font-semibold uppercase text-primary">
               Portofolio
             </h4>
@@ -232,8 +251,10 @@
           </div>
         </div>
         <div
-          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+          class="flex w-full flex-wrap justify-center px-4 text-base font-medium text-secondary xl:mx-auto xl:w-10/12">
           <article
+            data-aos="fade-up"
+            data-aos-duration="2000"
             class="mb-10 w-[360px] max-w-full px-5 py-3 shadow-md shadow-slate-800 dark:text-white dark:shadow-slate-500 lg:mr-8">
             <div class="relative block w-[360px] max-w-full">
               <div class="group">
@@ -275,6 +296,8 @@
           </article>
 
           <article
+            data-aos="fade-up"
+            data-aos-duration="2000"
             class="mb-10 w-[360px] max-w-full px-5 py-3 shadow-md shadow-slate-800 dark:text-white dark:shadow-slate-500 lg:mr-8">
             <div class="relative block w-[360px] max-w-full">
               <div class="group">
@@ -316,6 +339,8 @@
           </article>
 
           <article
+            data-aos="fade-up"
+            data-aos-duration="2000"
             class="mb-10 w-[360px] max-w-full px-5 py-3 shadow-md shadow-slate-800 dark:text-white dark:shadow-slate-500 lg:mr-8">
             <div class="relative block w-[360px] max-w-full">
               <div class="group">
@@ -360,7 +385,7 @@
 
     <!-- Skill Section Start -->
     <section id="skill" class="bg-slate-700 pb-32 pt-36 dark:bg-slate-700">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 text-center">
             <h4 class="mb-2 font-semibold uppercase text-primary">Skill</h4>
@@ -369,7 +394,7 @@
               Within My Ability
             </h2>
             <p
-              class="text-base font-medium text-secondary dark:text-slate-300 md:text-lg">
+              class="text-base font-medium text-white dark:text-white md:text-lg">
               I possess a diverse set of programming skills that enable me to
               tackle various development.
             </p>
@@ -378,57 +403,72 @@
         <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
             <span
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center center"
               class="mx-4 max-w-[75px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
               <img
                 src="dist/img/skill-icons/icons8-html.svg"
                 alt=""
                 class="my-1" />
               <div
-                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-secondary opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
+                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-white opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
                 HTML
               </div>
             </span>
             <span
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center center"
               class="mx-4 max-w-[75px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
               <img
                 src="dist/img/skill-icons/icons8-css.svg"
                 alt=""
                 class="my-1" />
               <div
-                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-secondary opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
+                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-white opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
                 CSS
               </div>
             </span>
             <span
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center center"
               class="mx-4 max-w-[75px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
               <img
                 src="dist/img/skill-icons/icons8-tailwind-css.svg"
                 alt=""
                 class="my-1" />
               <div
-                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-secondary opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
+                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-white opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
                 TailwindCSS
               </div>
             </span>
             <span
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center center"
               class="mx-4 max-w-[75px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
               <img
                 src="dist/img/skill-icons/icons8-c.svg"
                 alt=""
                 class="my-1" />
               <div
-                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-secondary opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
+                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-white opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
                 C++
               </div>
             </span>
             <span
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="center center"
               class="mx-4 max-w-[75px] cursor-pointer py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8">
               <img
                 src="dist/img/skill-icons/icons8-mysql.svg"
                 alt=""
                 class="my-1" />
               <div
-                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-secondary opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
+                class="absolute inset-0 z-10 flex items-end justify-center text-sm text-white opacity-0 duration-300 hover:opacity-100 dark:text-slate-200">
                 MySQL
               </div>
             </span>
@@ -440,7 +480,7 @@
 
     <!-- Contact Section Start -->
     <section id="contact" class="bg-slate-100 pb-32 pt-36 dark:bg-dark">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
         <!-- div Tagline -->
         <div class="w-full px-4">
           <div class="mx-auto mb-10 max-w-xl text-center">
@@ -456,14 +496,17 @@
         <div
           class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
           <!-- div kiri start -->
-          <div class="w-full lg:mt-5 lg:w-1/2">
+          <div
+            class="w-full lg:mt-5 lg:w-1/2"
+            data-aos="fade-up"
+            data-aos-duration="3000">
             <div class="mx-auto mb-2 text-center">
               <h2
                 class="mb-2 text-xl font-bold text-dark dark:text-white sm:text-2xl lg:text-3xl">
                 Drop me a line
               </h2>
               <p
-                class="mb-4 max-w-3xl text-base font-medium text-secondary dark:text-slate-300 md:text-lg">
+                class="mb-4 max-w-3xl text-base font-medium text-secondary dark:text-white md:text-lg">
                 Send a message and discuss shared interests.
               </p>
             </div>
@@ -480,14 +523,15 @@
                       id="nama"
                       name="nama"
                       type="text"
-                      class="inputNama mb-3 mt-2 w-full rounded-md border-none bg-transparent font-medium text-dark shadow-none outline-none dark:text-slate-300" />
+                      class="inputNama mb-3 mt-2 w-full border-none bg-transparent font-medium text-dark shadow-none outline-none dark:text-slate-300" />
                     <label
+                      white
                       for="nama"
-                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-base font-bold uppercase text-slate-400 transition duration-300"
+                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-sm font-semibold uppercase text-secondary transition duration-300 dark:text-white"
                       >Name</label
                     >
                     <i
-                      class="absolute bottom-0 left-0 h-1 w-full bg-slate-400"></i>
+                      class="absolute bottom-0 left-0 h-[2px] w-full bg-slate-700 dark:bg-white"></i>
                   </div>
                   <!-- input email -->
                   <div class="inputBox relative mb-8 mt-8">
@@ -496,31 +540,30 @@
                       id="email"
                       name="email"
                       type="email"
-                      class="inputEmail mb-3 mt-2 w-full rounded-md border-none bg-transparent font-medium text-dark shadow-none outline-none autofill:content-none dark:text-slate-300" />
+                      class="inputEmail mb-3 mt-2 w-full border-none bg-transparent font-medium text-dark shadow-none outline-none autofill:content-none dark:text-white" />
                     <label
                       for="email"
-                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-base font-bold uppercase text-slate-400 transition duration-300"
+                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-sm font-semibold uppercase text-secondary transition duration-300 dark:text-white"
                       >Email</label
                     >
                     <i
-                      class="absolute bottom-0 left-0 h-1 w-full bg-slate-400"></i>
+                      class="absolute bottom-0 left-0 h-[2px] w-full bg-slate-700 dark:bg-white"></i>
                   </div>
 
                   <!-- input message -->
-                  <div class="inputBox relative mb-8 mt-8">
-                    <input
+                  <div class="inputBoxPesan relative mb-8 mt-8">
+                    <textarea
                       required
                       id="pesan"
                       name="pesan"
-                      type="pesan"
-                      class="inputPesan mb-3 mt-2 w-full rounded-md border-none bg-transparent font-medium text-dark shadow-none outline-none autofill:bg-transparent dark:text-slate-300" />
+                      class="inputPesan mt-2 w-full resize-none border-none bg-transparent font-medium text-dark shadow-none outline-none autofill:bg-transparent dark:text-white"></textarea>
                     <label
                       for="pesan"
-                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-base font-bold uppercase text-slate-400 transition duration-300"
+                      class="pointer-events-none absolute left-0 pb-1 pt-3 text-sm font-semibold uppercase text-secondary transition duration-300 dark:text-white"
                       >Message</label
                     >
                     <i
-                      class="absolute bottom-0 left-0 h-1 w-full bg-slate-400"></i>
+                      class="absolute bottom-4 left-0 h-[2px] w-full bg-slate-700 transition duration-300 dark:bg-white"></i>
                   </div>
                 </div>
                 <div class="relative mb-3 w-full px-4">
@@ -656,7 +699,10 @@
           <!-- div kiri end -->
 
           <!-- div kanan start -->
-          <div class="mt-20 w-full lg:mt-5 lg:w-1/2 lg:px-4">
+          <div
+            class="mt-20 w-full lg:mt-5 lg:w-1/2 lg:px-4"
+            data-aos="fade-up"
+            data-aos-duration="3000">
             <div class="mx-auto mb-2 text-center">
               <h2
                 class="mb-4 text-xl font-bold text-dark dark:text-white sm:text-2xl lg:text-3xl">
@@ -796,5 +842,9 @@
     <!-- Footer Section End -->
 
     <script src="dist/js/script.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
